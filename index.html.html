@@ -1,0 +1,312 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roblox Login Demo</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f2f4f5;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #191919;
+}
+
+header {
+    height: 65px;
+    background: #dee1e3;
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+    border-bottom: 1px solid #ccc;
+}
+
+.logo {
+    font-size: 29px;
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 45px 15px;
+}
+
+.login-card {
+    width: 390px;
+    max-width: 100%;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px #00000012;
+    text-align: center;
+}
+
+h2 {
+    font-size: 25px;
+    margin: 0 0 25px;
+}
+
+.demo-notice {
+    background: #fff7df;
+    border: 1px solid #ead69a;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    color: #725a16;
+    line-height: 1.5;
+    margin-bottom: 22px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    height: 46px;
+    padding: 0 13px;
+    margin-bottom: 13px;
+    border: 1px solid #b8b8b8;
+    border-radius: 7px;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus {
+    border: 2px solid #555;
+}
+
+button {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #aaa;
+    border-radius: 7px;
+    background: #f7f7f7;
+    color: #191919;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #e8e8e8;
+}
+
+.links {
+    margin-top: 19px;
+    font-size: 13px;
+    color: #333;
+    line-height: 2;
+}
+
+.links span {
+    display: block;
+}
+
+.divider {
+    border-top: 1px solid #ddd;
+    margin: 22px 0;
+}
+
+.signup {
+    background: white;
+}
+
+#message {
+    margin-top: 18px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* ZODIAX SIGNATURE */
+
+.footer {
+    font-size: 11px;
+    color: #777;
+    margin-top: 25px;
+    padding-top: 18px;
+    border-top: 1px solid #e5e5e5;
+    line-height: 1.7;
+}
+
+.zodiax-signature {
+    display: inline-block;
+    position: relative;
+    margin: 12px 0 5px;
+    font-size: 23px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    color: #171717;
+    animation: signatureGlow 2.5s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+
+.zodiax-signature:hover {
+    transform: scale(1.15);
+}
+
+.zodiax-signature::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 20%;
+    margin: 5px auto;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #000,
+        #888,
+        #000,
+        transparent
+    );
+    animation: underline 2s ease-in-out infinite;
+}
+
+@keyframes signatureGlow {
+    0%, 100% {
+        text-shadow: 0 0 2px #888;
+        letter-spacing: 5px;
+    }
+
+    50% {
+        text-shadow:
+            0 0 5px #777,
+            0 0 12px #aaa,
+            0 0 20px #ddd;
+        letter-spacing: 7px;
+    }
+}
+
+@keyframes underline {
+    0%, 100% {
+        width: 15%;
+        opacity: 0.5;
+    }
+
+    50% {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+.developer-title {
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: #888;
+    font-weight: bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ROBLOX</div>
+</header>
+
+<main>
+    <div class="login-card">
+
+        <h2>Login</h2>
+
+        <div class="demo-notice">
+            FAN-MADE LOGIN DEMO<br>
+            Use fictional usernames and passwords only.
+            This is not the official Roblox website.
+        </div>
+
+        <form id="loginForm">
+
+            <input
+                type="text"
+                id="username"
+                placeholder="Username"
+                maxlength="30"
+                required
+            >
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Fake password"
+                maxlength="50"
+                required
+            >
+
+            <button type="submit">
+                Log In
+            </button>
+
+        </form>
+
+        <div id="message"></div>
+
+        <div class="links">
+            <span>Forgot Password or Username?</span>
+            <span>Don't have an account?</span>
+        </div>
+
+        <div class="divider"></div>
+
+        <button class="signup" type="button"
+        onclick="alert('Demo only: registration is disabled.')">
+            Sign Up
+        </button>
+
+        <div class="footer">
+
+            Independent fan-made demonstration.
+            <br>
+            No credentials are saved or transmitted.
+
+            <div class="zodiax-signature">
+                ⚡ ZODIAX ⚡
+            </div>
+
+            <div class="developer-title">
+                THE DEVELOPER BEHIND THE CODE
+            </div>
+
+        </div>
+
+    </div>
+</main>
+
+<script>
+
+const form = document.getElementById("loginForm");
+const message = document.getElementById("message");
+
+form.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const username =
+        document.getElementById("username").value.trim();
+
+    const password =
+        document.getElementById("password").value;
+
+    if (!username || !password) return;
+
+    message.style.color = "#16834a";
+
+    message.textContent =
+        "Demo login successful! Welcome, " + username + ".";
+
+    form.reset();
+
+});
+
+</script>
+
+</body>
+</html>
